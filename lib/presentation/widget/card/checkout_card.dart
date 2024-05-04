@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:free_market_pens_mobile/presentation/widget/tile/product_checkout_tile.dart';
+import 'package:free_market_pens_mobile/theme.dart';
 
 class CheckoutCard extends StatefulWidget {
   const CheckoutCard({super.key});
@@ -13,45 +16,67 @@ class _CheckoutCardState extends State<CheckoutCard> {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.hardEdge,
-      color: Colors.white,
+      color: tertiary2,
       elevation: 3,
       shape: RoundedRectangleBorder(
-        side: const BorderSide(
-          color: Colors.grey,
+        side: BorderSide(
+          color: tertiary,
           width: 1,
-        ), // primary color
+        ),
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Center(
         child: InkWell(
-          splashColor: Colors.teal.withAlpha(30), //secondary color
+          splashColor: secondary,
           onTap: () {},
-          child: const Padding(
-            padding: EdgeInsets.all(20.0),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Text("Toko A"),
-                SizedBox(height: 8),
+                Text(
+                  "Toko A",
+                  style: secondaryTextStyle,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 8),
                 Divider(
                   height: 1,
                   thickness: 1,
-                  color: Colors.grey, //tertiary
+                  color: tertiary,
                 ),
-                SizedBox(height: 8),
-                ProductCheckoutTile(),
-                ProductCheckoutTile(),
+                const SizedBox(height: 8),
+                Flexible(
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return ProductCheckoutTile();
+                    },
+                  ),
+                ),
                 Divider(
                   height: 1,
                   thickness: 1,
-                  color: Colors.grey, //tertiary
+                  color: tertiary,
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Total pesanan (3 produk): "),
-                    Text("Rp50.000"),
+                    Flexible(
+                      child: Text(
+                        "Total pesanan (3 produk): ",
+                        style: secondaryTextStyle,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Text(
+                      "Rp50.000",
+                      style: secondaryPriceStyle,
+                    ),
                   ],
                 ),
               ],

@@ -13,7 +13,7 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.hardEdge,
-      color: Colors.white,
+      color: tertiary2,
       elevation: 3,
       shape: RoundedRectangleBorder(
         side: BorderSide(
@@ -24,12 +24,12 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
       ),
       child: Center(
         child: InkWell(
-          splashColor: secondary,
+          splashColor: secondary.withAlpha(30),
           onTap: () {},
           child: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.add,
                 size: 35,
               ),

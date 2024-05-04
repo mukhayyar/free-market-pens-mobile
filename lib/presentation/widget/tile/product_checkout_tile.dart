@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:free_market_pens_mobile/theme.dart';
 
-class ProductCheckoutTile extends StatelessWidget {
+class ProductCheckoutTile extends StatefulWidget {
   const ProductCheckoutTile({super.key});
 
+  @override
+  State<ProductCheckoutTile> createState() => _ProductCheckoutTileState();
+}
+
+class _ProductCheckoutTileState extends State<ProductCheckoutTile> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,16 +32,30 @@ class ProductCheckoutTile extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            const Expanded(
+            Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Tahu Bakso"),
+                  Text(
+                    "Tahu Bakso",
+                    style: secondaryTextStyle,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Rp10.000"),
-                      Text("x 10"),
+                      Expanded(
+                        child: Text(
+                          "Rp10.000",
+                          style: secondaryPriceStyle,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      Text(
+                        "x 10",
+                        style: secondaryTextStyle,
+                      ),
                     ],
                   )
                 ],
@@ -43,7 +63,7 @@ class ProductCheckoutTile extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
       ],

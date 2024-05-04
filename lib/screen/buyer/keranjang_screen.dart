@@ -21,20 +21,20 @@ class _KeranjangScreenState extends State<KeranjangScreen> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(9, 6, 9, 0),
-          child: Column(
-            children: [
-              KeranjangCard(),
-              KeranjangCard(),
-              KeranjangCard(),
-              KeranjangCard(),
-              KeranjangCard(),
-              KeranjangCard(),
-              KeranjangCard(),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
+        child: Column(
+          children: [
+            Flexible(
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: 2,
+                itemBuilder: (context, index) {
+                  return const KeranjangCard();
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -13,18 +13,18 @@ class _AlamatCardState extends State<AlamatCard> {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.hardEdge,
-      color: Colors.white,
+      color: tertiary2,
       elevation: 3,
       shape: RoundedRectangleBorder(
-        side: const BorderSide(
-          color: Colors.grey,
+        side: BorderSide(
+          color: tertiary,
           width: 1,
-        ), // primary color
+        ),
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Center(
         child: InkWell(
-          splashColor: Colors.teal.withAlpha(30), //secondary color
+          splashColor: secondary.withAlpha(30),
           onTap: () {},
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -35,9 +35,9 @@ class _AlamatCardState extends State<AlamatCard> {
                 ),
               ),
               title: Text(
-                'Pos Satpam PENS', //alamat
+                'Pos Satpam PENS',
                 overflow: TextOverflow.ellipsis,
-                maxLines: 10,
+                maxLines: 5,
                 style: secondaryTextStyle,
               ),
               trailing: Row(

@@ -4,14 +4,14 @@ import 'package:free_market_pens_mobile/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 import 'package:input_quantity/input_quantity.dart';
 
-class ProductKeranjangTile extends StatefulWidget {
-  const ProductKeranjangTile({super.key});
+class ProdukKeranjangTile extends StatefulWidget {
+  const ProdukKeranjangTile({super.key});
 
   @override
-  State<ProductKeranjangTile> createState() => _ProductKeranjangTileState();
+  State<ProdukKeranjangTile> createState() => _ProdukKeranjangTileState();
 }
 
-class _ProductKeranjangTileState extends State<ProductKeranjangTile> {
+class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
   bool isChecked = false;
 
   @override
@@ -63,6 +63,9 @@ class _ProductKeranjangTileState extends State<ProductKeranjangTile> {
                       style: secondaryTextStyle,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(
+                      height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -23,20 +23,16 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Center(
-        child: InkWell(
-          splashColor: secondary.withAlpha(30),
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              leading: const Icon(
-                Icons.add,
-                size: 35,
-              ),
-              title: Text(
-                'Tambah Alamat',
-                style: secondaryTextStyle,
-              ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListTile(
+            leading: const Icon(
+              Icons.add,
+              size: 35,
+            ),
+            title: Text(
+              'Tambah Alamat',
+              style: secondaryTextStyle,
             ),
           ),
         ),

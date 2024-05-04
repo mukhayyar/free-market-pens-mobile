@@ -3,11 +3,11 @@ import 'package:free_market_pens_mobile/theme.dart';
 
 class IconText extends StatelessWidget {
   const IconText({
-    Key? key,
+    super.key,
     required this.icon,
     required this.text,
     required this.iconSize,
-  }) : super(key: key);
+  });
 
   final IconData icon;
   final String text;
@@ -21,7 +21,7 @@ class IconText extends StatelessWidget {
           icon,
           size: iconSize,
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Expanded(
           child: Text(
             text,

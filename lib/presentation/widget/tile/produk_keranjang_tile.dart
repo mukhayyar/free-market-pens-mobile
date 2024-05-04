@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:free_market_pens_mobile/screen/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 import 'package:input_quantity/input_quantity.dart';
 
@@ -23,7 +22,8 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => CheckoutScreen(), // ke halaman produk
+                builder: (context) =>
+                    const CheckoutScreen(), // ke halaman produk
               ),
             );
           },
@@ -64,7 +64,7 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Row(
@@ -91,7 +91,8 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
                                 borderRadius: BorderRadius.circular(30),
                               ),
                               minusBtn: Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8.0),
                                 child: Icon(
                                   Icons.remove,
                                   size: 9,
@@ -99,7 +100,8 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
                                 ),
                               ),
                               plusBtn: Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8.0),
                                 child: Icon(
                                   Icons.add,
                                   size: 9,

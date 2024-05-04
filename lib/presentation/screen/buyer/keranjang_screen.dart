@@ -23,18 +23,14 @@ class _KeranjangScreenState extends State<KeranjangScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
-        child: Column(
-          children: [
-            Flexible(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: 2,
-                itemBuilder: (context, index) {
-                  return const KeranjangCard();
-                },
-              ),
-            ),
-          ],
+        child: Flexible(
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 2,
+            itemBuilder: (context, index) {
+              return const KeranjangCard();
+            },
+          ),
         ),
       ),
     );

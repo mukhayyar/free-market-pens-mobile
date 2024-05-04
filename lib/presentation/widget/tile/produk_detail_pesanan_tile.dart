@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/icon_text.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/produk_harga.dart';
-import 'package:free_market_pens_mobile/theme.dart';
 
 class ProdukDetailPesananTile extends StatefulWidget {
-  const ProdukDetailPesananTile({Key? key}) : super(key: key);
+  const ProdukDetailPesananTile({super.key});
 
   @override
   State<ProdukDetailPesananTile> createState() =>
@@ -22,7 +19,7 @@ class _ProdukDetailPesananTileState extends State<ProdukDetailPesananTile> {
         children: [
           Container(
             width: 88,
-            height: 88,
+            height: 100,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: const DecorationImage(
@@ -31,8 +28,8 @@ class _ProdukDetailPesananTileState extends State<ProdukDetailPesananTile> {
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Expanded(
+          const SizedBox(width: 10),
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

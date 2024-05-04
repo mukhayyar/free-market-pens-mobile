@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/produk_harga.dart';
-import 'package:free_market_pens_mobile/theme.dart';
 
 class ProdukCheckoutTile extends StatefulWidget {
   const ProdukCheckoutTile({super.key});
@@ -32,7 +31,7 @@ class _ProdukCheckoutTileState extends State<ProdukCheckoutTile> {
             const SizedBox(
               width: 10,
             ),
-            Expanded(
+            const Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

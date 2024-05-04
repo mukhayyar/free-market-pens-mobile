@@ -23,20 +23,16 @@ class _DetailPesananScreenState extends State<DetailPesananScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
-        child: Column(
-          children: [
-            Flexible(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return DetailPesananCard(
-                    isCancelled: false, //status diganti
-                  );
-                },
-              ),
-            ),
-          ],
+        child: Flexible(
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return const DetailPesananCard(
+                isCancelled: false, //status diganti
+              );
+            },
+          ),
         ),
       ),
     );

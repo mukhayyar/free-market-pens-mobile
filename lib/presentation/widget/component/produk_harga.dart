@@ -8,11 +8,11 @@ class ProdukHarga extends StatelessWidget {
   final int quantity;
 
   const ProdukHarga({
-    Key? key,
+    super.key,
     required this.title,
     required this.price,
     required this.quantity,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ProdukHarga extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

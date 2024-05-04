@@ -22,30 +22,23 @@ class _AlamatScreenState extends State<AlamatScreen> {
           ),
         ),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
-            sliver: SliverList(
-              delegate: SliverChildListDelegate(
-                [
-                  const TambahAlamatCard(),
-                ],
-              ),
-            ),
-          ),
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(9, 0, 9, 0),
-            sliver: SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
+          child: Column(
+            children: [
+              const TambahAlamatCard(),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: 10,
+                itemBuilder: (context, index) {
                   return const AlamatCard();
                 },
-                childCount: 10, //jumlah alamat
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:free_market_pens_mobile/presentation/widget/tile/produk_checkout_tile.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
@@ -45,17 +43,13 @@ class _CheckoutCardState extends State<CheckoutCard> {
                 color: tertiary,
               ),
               const SizedBox(height: 8),
-              ConstrainedBox(
-                constraints:
-                    BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: ClampingScrollPhysics(),
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return ProdukCheckoutTile();
-                  },
-                ),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const ClampingScrollPhysics(),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return const ProdukCheckoutTile();
+                },
               ),
               Divider(
                 height: 1,

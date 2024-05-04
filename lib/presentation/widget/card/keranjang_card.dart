@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widget/tile/produk_keranjang_tile.dart';
-import 'package:free_market_pens_mobile/screen/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class KeranjangCard extends StatefulWidget {
@@ -59,11 +59,11 @@ class _KeranjangCardState extends State<KeranjangCard> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              CheckoutScreen(), // Ganti dengan halaman yang sesuai
+                              const CheckoutScreen(), // Ganti dengan halaman yang sesuai
                         ),
                       );
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward_ios_rounded,
                       size: 15,
                     ),
@@ -81,15 +81,13 @@ class _KeranjangCardState extends State<KeranjangCard> {
                 color: tertiary,
               ),
               const SizedBox(height: 8),
-              Flexible(
-                child: ListView.builder(
-                  physics: ClampingScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return const ProdukKeranjangTile();
-                  },
-                ),
+              ListView.builder(
+                physics: const ClampingScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return const ProdukKeranjangTile();
+                },
               ),
             ],
           ),

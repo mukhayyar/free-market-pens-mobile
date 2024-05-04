@@ -1,14 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:free_market_pens_mobile/presentation/widget/tile/produk_checkout_tile.dart';
 import 'package:free_market_pens_mobile/presentation/widget/tile/produk_detail_pesanan_tile.dart';
-import 'package:free_market_pens_mobile/screen/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class DetailPesananCard extends StatefulWidget {
-  const DetailPesananCard({Key? key, required this.isCancelled})
-      : super(key: key);
+  const DetailPesananCard({super.key, required this.isCancelled});
 
   final bool isCancelled;
 
@@ -52,11 +48,11 @@ class _DetailPesananCardState extends State<DetailPesananCard> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              CheckoutScreen(), // Ganti dengan halaman yang sesuai
+                              const CheckoutScreen(), // Ganti dengan halaman yang sesuai
                         ),
                       );
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward_ios_rounded,
                       size: 15,
                     ),
@@ -75,17 +71,13 @@ class _DetailPesananCardState extends State<DetailPesananCard> {
                 color: tertiary,
               ),
               const SizedBox(height: 8),
-              ConstrainedBox(
-                constraints:
-                    BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: ClampingScrollPhysics(),
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return ProdukDetailPesananTile();
-                  },
-                ),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const ClampingScrollPhysics(),
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return const ProdukDetailPesananTile();
+                },
               ),
               Divider(
                 height: 1,
@@ -111,7 +103,7 @@ class _DetailPesananCardState extends State<DetailPesananCard> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Row(
@@ -156,7 +148,7 @@ class _DetailPesananCardState extends State<DetailPesananCard> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Row(

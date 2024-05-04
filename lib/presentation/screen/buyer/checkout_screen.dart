@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widget/card/checkout_card.dart';
 import 'package:free_market_pens_mobile/theme.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/keranjang_card.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -24,18 +23,14 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
-        child: Column(
-          children: [
-            Flexible(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return const CheckoutCard();
-                },
-              ),
-            ),
-          ],
+        child: Flexible(
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return const CheckoutCard();
+            },
+          ),
         ),
       ),
     );

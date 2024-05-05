@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
-class AlamatCard extends StatefulWidget {
+class AlamatCard extends StatelessWidget {
   const AlamatCard({super.key});
 
-  @override
-  State<AlamatCard> createState() => _AlamatCardState();
-}
-
-class _AlamatCardState extends State<AlamatCard> {
   @override
   Widget build(BuildContext context) {
     return Card(

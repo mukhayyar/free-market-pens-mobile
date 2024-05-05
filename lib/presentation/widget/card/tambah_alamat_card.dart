@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screen/seller/tambah_alamat_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class TambahAlamatCard extends StatefulWidget {
@@ -22,17 +23,29 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
         ),
         borderRadius: BorderRadius.circular(12.0),
       ),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListTile(
-            leading: const Icon(
-              Icons.add,
-              size: 35,
+      child: InkWell(
+        splashColor: secondary,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  const TambahAlamatScreen(), // Ganti dengan halaman yang sesuai
             ),
-            title: Text(
-              'Tambah Alamat',
-              style: secondaryTextStyle,
+          );
+        },
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              leading: const Icon(
+                Icons.add,
+                size: 35,
+              ),
+              title: Text(
+                'Tambah Alamat',
+                style: secondaryTextStyle,
+              ),
             ),
           ),
         ),

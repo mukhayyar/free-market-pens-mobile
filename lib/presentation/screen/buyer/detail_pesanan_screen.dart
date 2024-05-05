@@ -14,12 +14,11 @@ class _DetailPesananScreenState extends State<DetailPesananScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Detail Pesanan",
-            style: appBarTitleStyle,
-          ),
+        title: Text(
+          "Detail Pesanan",
+          style: appBarTitleStyle,
         ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),

@@ -8,7 +8,8 @@ class KonfirmasiIconButton extends StatefulWidget {
   final ButtonCondition condition;
   final Function(IconData, Color) onPressed;
 
-  KonfirmasiIconButton({required this.condition, required this.onPressed});
+  const KonfirmasiIconButton(
+      {super.key, required this.condition, required this.onPressed});
 
   @override
   _KonfirmasiIconButtonState createState() => _KonfirmasiIconButtonState();

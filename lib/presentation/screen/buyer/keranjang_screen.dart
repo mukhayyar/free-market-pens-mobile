@@ -14,12 +14,11 @@ class _KeranjangScreenState extends State<KeranjangScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Keranjang",
-            style: appBarTitleStyle,
-          ),
+        title: Text(
+          "Keranjang",
+          style: appBarTitleStyle,
         ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),

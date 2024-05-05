@@ -3,16 +3,11 @@ import 'package:free_market_pens_mobile/presentation/widget/tile/produk_detail_p
 import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
-class DetailPesananCard extends StatefulWidget {
+class DetailPesananCard extends StatelessWidget {
   const DetailPesananCard({super.key, required this.isCancelled});
 
   final bool isCancelled;
 
-  @override
-  State<DetailPesananCard> createState() => _DetailPesananCardState();
-}
-
-class _DetailPesananCardState extends State<DetailPesananCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -122,7 +117,7 @@ class _DetailPesananCardState extends State<DetailPesananCard> {
                   ),
                 ],
               ),
-              if (widget.isCancelled)
+              if (isCancelled)
                 Column(
                   children: [
                     const SizedBox(height: 8),

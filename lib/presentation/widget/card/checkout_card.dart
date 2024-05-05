@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widget/tile/produk_checkout_tile.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
-class CheckoutCard extends StatefulWidget {
+class CheckoutCard extends StatelessWidget {
   const CheckoutCard({super.key});
 
-  @override
-  State<CheckoutCard> createState() => _CheckoutCardState();
-}
-
-class _CheckoutCardState extends State<CheckoutCard> {
   @override
   Widget build(BuildContext context) {
     return Card(

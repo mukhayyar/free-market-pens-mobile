@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/gambar.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 import 'package:input_quantity/input_quantity.dart';
 
@@ -19,13 +19,13 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>
-                    const CheckoutScreen(), // ke halaman produk
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) =>
+            //         const CheckoutScreen(), // ke halaman produk
+            //   ),
+            // );
           },
           child: Row(
             children: [
@@ -40,17 +40,11 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
                 },
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
               ),
-              Container(
-                width: 88,
-                height: 51,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  image: const DecorationImage(
-                    image: AssetImage('assets/tahu_bakso.jpg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+              const Gambar(
+                  width: 88,
+                  height: 51,
+                  stringGambar:
+                      'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg'),
               const SizedBox(
                 width: 10,
               ),

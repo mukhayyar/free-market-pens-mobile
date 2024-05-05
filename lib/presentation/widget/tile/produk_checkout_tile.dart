@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/gambar.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/produk_harga.dart';
 
 class ProdukCheckoutTile extends StatefulWidget {
@@ -13,25 +14,19 @@ class ProdukCheckoutTile extends StatefulWidget {
 class _ProdukCheckoutTileState extends State<ProdukCheckoutTile> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Row(
           children: [
-            Container(
-              width: 88,
-              height: 51,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
-                  image: AssetImage('assets/tahu_bakso.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            const SizedBox(
+            Gambar(
+                width: 88,
+                height: 51,
+                stringGambar:
+                    'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg'),
+            SizedBox(
               width: 10,
             ),
-            const Expanded(
+            Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -45,7 +40,7 @@ class _ProdukCheckoutTileState extends State<ProdukCheckoutTile> {
             ),
           ],
         ),
-        const SizedBox(
+        SizedBox(
           height: 8,
         ),
       ],

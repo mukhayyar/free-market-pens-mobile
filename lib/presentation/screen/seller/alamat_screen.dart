@@ -15,12 +15,11 @@ class _AlamatScreenState extends State<AlamatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Alamat Pengambilan",
-            style: appBarTitleStyle,
-          ),
+        title: Text(
+          "Alamat Pengambilan",
+          style: appBarTitleStyle,
         ),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Padding(

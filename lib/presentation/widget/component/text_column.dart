@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/konfirmasi_icon_button.dart';
 import 'package:free_market_pens_mobile/theme.dart';
@@ -36,7 +34,7 @@ class _TextColumnState extends State<TextColumn> {
                   //String url = "";
                   //launch(url);
                 },
-                icon: FaIcon(
+                icon: const FaIcon(
                   FontAwesomeIcons.whatsapp,
                   color: Color(0xFF64B161),
                 ),

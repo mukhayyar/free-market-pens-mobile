@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widget/card/checkout_card.dart';
-import 'package:free_market_pens_mobile/theme.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -14,12 +13,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Checkout",
-            style: appBarTitleStyle,
-          ),
+        title: Text(
+          "Checkout",
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),

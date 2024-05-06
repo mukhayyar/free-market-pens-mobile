@@ -173,7 +173,6 @@ class TokoSayaPage extends StatelessWidget {
                               ? 15
                               : 10),
                       width: screenWidth,
-                      height: 170,
                       child: GridView.builder(
                         shrinkWrap:
                             true, // Agar GridView mengikuti ukuran parent-nya

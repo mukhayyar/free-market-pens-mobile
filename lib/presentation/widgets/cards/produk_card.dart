@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/pages/detail_produk_page.dart';
+import 'package:free_market_pens_mobile/presentation/pages/common/detail_produk_page.dart';
 
 class ProdukCard extends StatelessWidget {
   final String role = 'seller';

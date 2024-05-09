@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
 import 'package:free_market_pens_mobile/presentation/widget/card/keranjang_card.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
+
+final TextEditingController _emailController = TextEditingController();
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +18,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Free Market',
       theme: appTheme,
-      home: const KeranjangScreen(),
+      home: Scaffold(
+        body: Center(
+          child: CustomTextField(
+            labelText: 'Email',
+            hintText: 'Enter your email',
+            icon: Icons.email,
+            controller: _emailController,
+          ),
+        ),
+      ),
     );
   }
 }

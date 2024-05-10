@@ -11,7 +11,7 @@ class CustomTextField extends StatefulWidget {
   final bool isPassword;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.labelText,
     required this.hintText,
     required this.controller,
@@ -19,7 +19,7 @@ class CustomTextField extends StatefulWidget {
     this.icon,
     this.isPhoneNumber = false,
     this.isPassword = false,
-  }) : super(key: key);
+  });
 
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
@@ -54,14 +54,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   ? Icon(
                       widget.icon,
                       size: 24,
-                      color: Color(0xFF404040),
+                      color: const Color(0xFF404040),
                     )
                   : null,
               suffixIcon: widget.isPassword
                   ? IconButton(
                       icon: Icon(
                         _isObscure ? Icons.visibility : Icons.visibility_off,
-                        color: Color(0xFF404040),
+                        color: const Color(0xFF404040),
                       ),
                       onPressed: () {
                         setState(() {

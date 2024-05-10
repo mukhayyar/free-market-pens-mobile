@@ -55,7 +55,7 @@ class _DetailPenjualanScreenState extends State<DetailPenjualanScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: TotalBottomAppBar(),
+      bottomNavigationBar: const TotalBottomAppBar(),
     );
   }
 }

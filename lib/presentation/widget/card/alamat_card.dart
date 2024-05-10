@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screen/seller/tambah_edit_alamat_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AlamatCard extends StatelessWidget {
@@ -40,7 +41,14 @@ class AlamatCard extends StatelessWidget {
                   icon: const Icon(Icons.edit),
                   color: primary,
                   onPressed: () {
-                    // Add your edit functionality here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TambahEditAlamatScreen(
+                          judul: 'Edit Alamat',
+                        ),
+                      ),
+                    );
                   },
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),

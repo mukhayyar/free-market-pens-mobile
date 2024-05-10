@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
 import 'package:free_market_pens_mobile/presentation/widget/component/latar_setengah_lingkaran.dart';
 
-class TambahAlamatScreen extends StatefulWidget {
-  const TambahAlamatScreen({super.key});
+class TambahEditAlamatScreen extends StatefulWidget {
+  const TambahEditAlamatScreen({super.key, required this.judul});
+
+  final String judul;
 
   @override
-  State<TambahAlamatScreen> createState() => _TambahAlamatScreenState();
+  State<TambahEditAlamatScreen> createState() => _TambahEditAlamatScreenState();
 }
 
-class _TambahAlamatScreenState extends State<TambahAlamatScreen> {
+class _TambahEditAlamatScreenState extends State<TambahEditAlamatScreen> {
   final TextEditingController _alamatController = TextEditingController();
-  final TextEditingController _nomorController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Tambah Alamat",
+          widget.judul,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         centerTitle: true,
@@ -37,7 +36,7 @@ class _TambahAlamatScreenState extends State<TambahAlamatScreen> {
                 LatarSetengahLingkaran(),
                 SizedBox(
                   height: 150,
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screen/seller/alamat_screen.dart';
-import 'package:free_market_pens_mobile/presentation/screen/seller/detail_penjualan_screen.dart';
-import 'package:free_market_pens_mobile/presentation/screen/seller/tambah_alamat_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 void main() {
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Free Market',
       theme: appTheme,
       debugShowCheckedModeBanner: false,
-      home: TambahAlamatScreen(),
+      home: AlamatScreen(),
     );
   }
 }

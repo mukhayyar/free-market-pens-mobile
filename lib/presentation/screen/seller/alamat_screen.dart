@@ -23,7 +23,7 @@ class _AlamatScreenState extends State<AlamatScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
+          padding: const EdgeInsets.fromLTRB(9, 6, 9, 6),
           child: Column(
             children: [
               const TambahAlamatCard(),

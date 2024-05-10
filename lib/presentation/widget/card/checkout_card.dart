@@ -10,6 +10,7 @@ class CheckoutCard extends StatelessWidget {
     return Card(
       clipBehavior: Clip.hardEdge,
       color: tertiary2,
+      surfaceTintColor: tertiary2,
       elevation: 3,
       shape: RoundedRectangleBorder(
         side: BorderSide(

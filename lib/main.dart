@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/keranjang_card.dart';
+import 'package:free_market_pens_mobile/presentation/screen/seller/alamat_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 void main() {
@@ -14,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Free Market',
       theme: appTheme,
-      home: const KeranjangScreen(),
+      debugShowCheckedModeBanner: false,
+      home: AlamatScreen(),
     );
   }
 }

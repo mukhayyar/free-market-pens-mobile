@@ -28,7 +28,7 @@ class _DropdownState extends State<Dropdown> {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 1,
               blurRadius: 3,
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
             ),
           ],
         ),
@@ -46,7 +46,7 @@ class _DropdownState extends State<Dropdown> {
             constraints: BoxConstraints.tight(
               const Size.fromHeight(40),
             ),
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
             border: OutlineInputBorder(

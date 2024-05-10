@@ -1,10 +1,7 @@
-// ignore_for_file: unnecessary_import
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:free_market_pens_mobile/presentation/widgets/cards/produk_card.dart';
-import 'package:free_market_pens_mobile/presentation/widgets/cards/tambah_produk_card.dart';
-import 'package:free_market_pens_mobile/presentation/widgets/components/latar_setengah_lingkaran.dart';
+import 'package:free_market_pens_mobile/presentation/widget/card/produk_card.dart';
+import 'package:free_market_pens_mobile/presentation/widget/card/tambah_produk_card.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/latar_setengah_lingkaran.dart';
 
 class ProdukSayaPage extends StatelessWidget {
   const ProdukSayaPage({super.key});

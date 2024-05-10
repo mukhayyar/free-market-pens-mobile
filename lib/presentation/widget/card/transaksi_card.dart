@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widgets/components/gambar.dart';
+import 'package:free_market_pens_mobile/presentation/widget/component/gambar.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class TransaksiCard extends StatelessWidget {

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/presentation/widgets/cards/produk_card.dart
 import 'package:free_market_pens_mobile/presentation/pages/common/detail_produk_page.dart';
+=======
+>>>>>>> 0bd9ec08998da49578afc4b4d1b1e5e7dfe2e2a5:lib/presentation/widget/card/produk_card.dart
 
 class ProdukCard extends StatelessWidget {
   final String role = 'seller';
@@ -20,13 +23,13 @@ class ProdukCard extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>
-                  const DetailProdukPage(), // Ganti dengan halaman yang sesuai
-            ),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) =>
+          //         const DetailProdukPage(), // Ganti dengan halaman yang sesuai
+          //   ),
+          // );
         },
         child: Container(
           height: 175,

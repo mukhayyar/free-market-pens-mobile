@@ -6,7 +6,7 @@ class CustomButton extends StatelessWidget {
   final String labelButton;
   final double width;
   final double height;
-  final Function onPressedAction;
+  //final Function onPressedAction;
 
   const CustomButton({
     super.key,
@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
     required this.labelButton,
     required this.width,
     required this.height,
-    required this.onPressedAction,
+    //required this.onPressedAction,
   });
 
   @override
@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
         padding: const EdgeInsets.all(10),
       ),
       onPressed: () {
-        onPressedAction(); // Panggil fungsi onPressedAction saat tombol ditekan
+        //onPressedAction(); // Panggil fungsi onPressedAction saat tombol ditekan
       },
       child: Text(
         labelButton,

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
+import 'package:free_market_pens_mobile/presentation/widget/card/keranjang_card.dart';
+import 'package:free_market_pens_mobile/theme.dart';
 import 'package:free_market_pens_mobile/pages/riwayat_page.dart';
 import 'package:free_market_pens_mobile/widget/image_widget.dart';
 
@@ -9,10 +13,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           tabBarTheme: TabBarTheme(

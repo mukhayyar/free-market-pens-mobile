@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/dibatalkan_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/proses_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/selesai_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/tersedia_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
 
 class RiwayatPage extends StatelessWidget {
   const RiwayatPage({super.key});
@@ -35,6 +40,14 @@ class RiwayatPage extends StatelessWidget {
               ),
             ],
           ),
+        ),
+        body: TabBarView(
+          children: [
+            ProsesRiwayatPage(),
+            TersediaRiwayatPage(),
+            SelesaiRiwayatPage(),
+            DibatalkanRiwayatPage(),
+          ],
         ),
       ),
     );

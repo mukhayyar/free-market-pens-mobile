@@ -1,78 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
+const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+
 class Dropdown extends StatefulWidget {
-  const Dropdown({super.key});
+  const Dropdown({super.key, required this.role});
+
+  final String role;
 
   @override
-  _DropdownState createState() => _DropdownState();
+  State<Dropdown> createState() => _DropdownState();
 }
 
 class _DropdownState extends State<Dropdown> {
-  final List<String> _dropDownItems = [
-    'One',
-    'Two',
-    'Three',
-    'Four',
-    's',
-    'sev',
-    'eg',
-    'nn',
-    'tn',
-    'eelv',
-    'tw',
-    'thr',
-    'frt',
-    'fvt',
-    'stn',
-    'etn',
-    'nnt',
-    'twt',
-    'ttt',
-    'tttt',
-    'vv',
-    'dd',
-    'ss',
-    'gg',
-    'hh'
-  ];
-  String? _selectedItem;
+  String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 35,
-      child: DropdownButtonFormField<String>(
-        value: _selectedItem,
-        hint: Text(
-          'Pilih alamat',
-          style: secondaryTextStyle,
-        ),
-        menuMaxHeight: 300,
-        decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: primary),
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-        ),
-        items: _dropDownItems.map((String item) {
-          return DropdownMenuItem(
-            value: item,
-            child: Text(
-              item,
-              style: secondaryTextStyle,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 1,
+              blurRadius: 3,
+              offset: Offset(0, 2),
             ),
-          );
-        }).toList(),
-        onChanged: (String? value) {
-          setState(() {
-            _selectedItem = value!;
-          });
-        },
+          ],
+        ),
+        child: DropdownMenu<String>(
+          menuHeight: 300,
+          width: MediaQuery.of(context).size.width - 30,
+          requestFocusOnTap: true,
+          hintText: widget.role == 'alamat'
+              ? 'Pilih tempat pengambilan'
+              : 'Pilih batch',
+          textStyle:
+              (selectedValue != null ? secondaryTextStyle : tertiaryTextStyle),
+          inputDecorationTheme: InputDecorationTheme(
+            isDense: true,
+            constraints: BoxConstraints.tight(
+              const Size.fromHeight(40),
+            ),
+            contentPadding: EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            border: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+          ),
+          onSelected: (String? value) {
+            setState(() {
+              selectedValue = value;
+            });
+          },
+          dropdownMenuEntries:
+              list.map<DropdownMenuEntry<String>>((String value) {
+            return DropdownMenuEntry<String>(
+              value: value,
+              label: value,
+              style: MenuItemButton.styleFrom(
+                textStyle: secondaryTextStyle,
+              ),
+            );
+          }).toList(),
+        ),
       ),
     );
   }

@@ -26,7 +26,9 @@ class _DetailPenjualanScreenState extends State<DetailPenjualanScreen> {
           padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
           child: Column(
             children: [
-              const Dropdown(),
+              Dropdown(
+                role: 'batch',
+              ),
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),

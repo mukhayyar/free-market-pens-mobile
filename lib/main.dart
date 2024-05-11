@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/buka_batch_baru_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/seller/toko_saya_page.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 void main() {
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: const BukaBatchBaruPage(
-        noBatch: 1,
-      ),
+      home: const TokoSayaPage(
+          // noBatch: 1,
+          ),
     );
   }
 }

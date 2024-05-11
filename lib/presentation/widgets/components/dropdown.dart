@@ -36,13 +36,15 @@ class _DropdownState extends State<Dropdown> {
         child: DropdownMenu<String>(
           menuStyle: const MenuStyle(
               // elevation: MaterialStatePropertyAll(4),
-              // padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+              padding: MaterialStatePropertyAll(
+                  EdgeInsets.only(left: 3, right: 3, bottom: 5)),
               backgroundColor: MaterialStatePropertyAll(Colors.transparent),
               surfaceTintColor: MaterialStatePropertyAll(Colors.transparent),
               // elevation: MaterialStatePropertyAll(10),
               shadowColor: MaterialStatePropertyAll(Colors.transparent)),
           // menuHeight: 300,
-          width: MediaQuery.of(context).size.width - 45,
+          width: MediaQuery.of(context).size.width - 70,
+
           // requestFocusOnTap: true,
           hintText: widget.dropdownType == 'alamat'
               ? 'Pilih tempat pengambilan'

@@ -59,7 +59,7 @@ class _TambahEditFormPageState extends State<TambahEditFormPage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(36, 0, 36, 0),
               child: CustomTextField(
                 labelText:
                     widget.pageType == 'toko' ? 'Nama Toko' : 'Nama Produk',
@@ -70,7 +70,7 @@ class _TambahEditFormPageState extends State<TambahEditFormPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 5, 20, 20),
+              padding: const EdgeInsets.fromLTRB(36, 5, 36, 20),
               child: CustomTextField(
                 labelText: widget.pageType == 'toko'
                     ? 'Nomor WhatsApp'

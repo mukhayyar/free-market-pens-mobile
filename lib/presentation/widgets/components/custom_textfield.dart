@@ -10,6 +10,7 @@ class CustomTextField extends StatefulWidget {
   final bool isPhoneNumber;
   final bool isPassword;
   final bool isLong;
+  final TextStyle? labelTextStyle;
 
   const CustomTextField({
     super.key,
@@ -21,6 +22,7 @@ class CustomTextField extends StatefulWidget {
     this.isPhoneNumber = false,
     this.isPassword = false,
     this.isLong = false,
+    this.labelTextStyle,
   });
 
   @override
@@ -33,11 +35,16 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (widget.icon == null) Text(widget.labelText),
+          if (widget.icon == null)
+            Text(
+              widget.labelText,
+              style: widget.labelTextStyle ??
+                  const TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
+            ),
           TextField(
             maxLines: widget.isLong ? 4 : 1,
             controller: widget.controller,

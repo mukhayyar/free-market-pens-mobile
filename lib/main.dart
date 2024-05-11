@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/seller/alamat_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screens/seller/toko_saya_page.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 void main() {
@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Free Market',
       theme: appTheme,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: AlamatScreen(),
+      home: const TokoSayaPage(),
     );
   }
 }

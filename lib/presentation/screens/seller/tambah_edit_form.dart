@@ -90,7 +90,7 @@ class _TambahEditFormPageState extends State<TambahEditFormPage> {
                 child: CustomButton(
                   isFilled: true,
                   labelButton: 'Simpan',
-                  width: 104,
+                  width: 130,
                   height: 38,
                   onPressedAction: () {}, //TODO: simpan perubahan
                 ),

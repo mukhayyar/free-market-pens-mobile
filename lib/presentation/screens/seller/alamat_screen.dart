@@ -16,6 +16,7 @@ class _AlamatScreenState extends State<AlamatScreen> {
     return Scaffold(
       backgroundColor: onPrimary,
       appBar: AppBar(
+        shadowColor: tertiary,
         title: Text(
           "Alamat Pengambilan",
           style: appBarTitleStyle,
@@ -26,7 +27,7 @@ class _AlamatScreenState extends State<AlamatScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(9, 6, 9, 6),
+          padding: const EdgeInsets.fromLTRB(9, 6, 9, 36),
           child: Column(
             children: [
               const TambahAlamatCard(),

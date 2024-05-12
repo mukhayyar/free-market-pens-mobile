@@ -16,7 +16,7 @@ class TambahProdukCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const TambahEditProdukPage(),
+              builder: (context) => const TambahEditProdukPage(tipe: "tambah"),
             ),
           );
         },

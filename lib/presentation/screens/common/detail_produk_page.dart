@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_batch_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_produk_page.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_input_qty.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/dropdown.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/gambar.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/info_pengambilan.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/konten.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/info_waktu.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/keterangan_gambar.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/read_more_text.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class DetailProdukPage extends StatelessWidget {
-  final String role = 'buyer';
+  final String role = 'seller';
   final String imgProduk =
       'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg';
   final String namaProduk = 'Tahu Bakso Enak Dapur Mama Udin';
@@ -28,7 +32,7 @@ class DetailProdukPage extends StatelessWidget {
   final String imgToko =
       'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg';
   final int noBatch = 0;
-  final String? statusProdukSekarang = 'terima'; //status produk batch yg skrg
+  final String? statusProdukSekarang = 'selesai'; //status produk batch yg skrg
   //final String linkWA;
 
   const DetailProdukPage({super.key});
@@ -166,7 +170,9 @@ class DetailProdukPage extends StatelessWidget {
                           tanggalAmbil, jamAmbil, tempatAmbil),
                     ],
                   ),
-                Konten(judulKeterangan: 'Deskripsi', keterangan: deskripsi),
+                Konten(
+                    judulKeterangan: 'Deskripsi',
+                    keterangan: ReadMoreText(longText: deskripsi)),
                 if (role == 'seller')
                   Column(
                     children: [
@@ -181,7 +187,14 @@ class DetailProdukPage extends StatelessWidget {
                                 offset: const Offset(10, 0),
                                 child: IconButton(
                                     onPressed: () {
-                                      //TODO: navigasi ke halaman edit batch
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              TambahEditBatchPage(
+                                                  tipe: "edit",
+                                                  noBatch: noBatch),
+                                        ),
+                                      );
                                     },
                                     icon: const Icon(Icons.edit_outlined)),
                               ),
@@ -231,20 +244,27 @@ class DetailProdukPage extends StatelessWidget {
                     labelButton: 'Edit Produk',
                     width: screenWidth,
                     height: 38,
-                    onPressedAction:
-                        () {}), //TODO: navigasi ke edit produk page
+                    onPressedAction: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const TambahEditProdukPage(
+                            tipe: "edit",
+                          ),
+                        ),
+                      );
+                    }),
                 CustomButton(
                   isFilled: true,
                   labelButton: 'Buka Batch #${noBatch + 1}',
                   width: screenWidth,
                   height: 38,
                   onPressedAction: () {
-                    //TODO: navigasi ke buka batch page
-                    //// Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const KeranjangScreen(),
-                    //   ),
-                    // );
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => TambahEditBatchPage(
+                            tipe: "tambah", noBatch: noBatch + 1),
+                      ),
+                    );
                   },
                   isEnabled: (statusProdukSekarang ==
                               null || //cuma bisa diklik klo batch yg skrg udh selesai, atau saat pertama kali buka batch
@@ -256,7 +276,7 @@ class DetailProdukPage extends StatelessWidget {
             ),
           )
         : Row(children: [
-            const Text('inputan quantity'), //TODO: ganti jadi input quantity
+            const CustomInputQty(tinggi: 40, lebar: 110, tipeInput: "regular"),
             const SizedBox(width: 20),
             Expanded(
               flex: 2,

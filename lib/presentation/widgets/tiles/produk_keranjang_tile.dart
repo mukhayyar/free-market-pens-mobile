@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_input_qty.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/gambar.dart';
 import 'package:free_market_pens_mobile/theme.dart';
-import 'package:input_quantity/input_quantity.dart';
 
 class ProdukKeranjangTile extends StatefulWidget {
   const ProdukKeranjangTile({super.key});
@@ -68,42 +68,7 @@ class _ProdukKeranjangTileState extends State<ProdukKeranjangTile> {
                           "Rp10.000",
                           style: secondaryPriceStyle,
                         ),
-                        InputQty(
-                          initVal: 1,
-                          minVal: 1,
-                          steps: 1,
-                          qtyFormProps: const QtyFormProps(
-                            style: TextStyle(fontSize: 12),
-                          ),
-                          decoration: QtyDecorationProps(
-                              fillColor: primary,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: tertiary,
-                                  width: 0,
-                                ),
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              minusBtn: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
-                                child: Icon(
-                                  Icons.remove,
-                                  size: 9,
-                                  color: onPrimary,
-                                ),
-                              ),
-                              plusBtn: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
-                                child: Icon(
-                                  Icons.add,
-                                  size: 9,
-                                  color: onPrimary,
-                                ),
-                              )),
-                          onQtyChanged: (val) {},
-                        ),
+                        const CustomInputQty(lebar: 79, tipeInput: 'regular')
                       ],
                     )
                   ],

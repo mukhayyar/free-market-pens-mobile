@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
-const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+const List<String> list = <String>[
+  'One',
+  'Two',
+  'Three',
+  'Four',
+  'One',
+  'Two',
+  'Three',
+  'Four',
+];
 
 class Dropdown extends StatefulWidget {
   const Dropdown({super.key, required this.dropdownType});
@@ -22,6 +31,7 @@ class _DropdownState extends State<Dropdown> {
 
     return Container(
       width: screenWidth,
+      constraints: BoxConstraints.loose(Size.fromWidth(screenWidth)),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.0),
@@ -35,28 +45,25 @@ class _DropdownState extends State<Dropdown> {
         ],
       ),
       child: DropdownMenu<String>(
-        menuStyle: const MenuStyle(
-            // elevation: MaterialStatePropertyAll(4),
-            padding: MaterialStatePropertyAll(
-                EdgeInsets.only(left: 3, right: 3, bottom: 5)),
-            backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-            surfaceTintColor: MaterialStatePropertyAll(Colors.transparent),
-            // elevation: MaterialStatePropertyAll(10),
-            shadowColor: MaterialStatePropertyAll(Colors.transparent)),
-        // menuHeight: 300,
+        // width: screenWidth,
+        menuStyle: MenuStyle(
+            maximumSize: MaterialStatePropertyAll(Size.fromWidth(screenWidth)),
+            padding:
+                const MaterialStatePropertyAll(EdgeInsets.fromLTRB(3, 8, 3, 8)),
+            backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+            surfaceTintColor:
+                const MaterialStatePropertyAll(Colors.transparent),
+            shadowColor: const MaterialStatePropertyAll(Colors.transparent)),
+        menuHeight: 250,
         width: widget.dropdownType == 'alamat'
             ? screenWidth - 67
-            : screenWidth - 37,
-
-        // requestFocusOnTap: true,
+            : screenWidth - 40,
         hintText: widget.dropdownType == 'alamat'
             ? 'Pilih tempat pengambilan'
             : 'Pilih batch',
         textStyle:
             (selectedValue != null ? secondaryTextStyle : tertiaryTextStyle),
         inputDecorationTheme: InputDecorationTheme(
-          // focusColor: tertiary2,
-          // filled: true,
           isDense: true,
           constraints: BoxConstraints.tight(
             const Size.fromHeight(40),

@@ -17,20 +17,14 @@ class CustomButton extends StatelessWidget {
     required this.height,
     required this.onPressedAction,
     this.isEnabled = true,
-    //required this.onPressedAction,
   });
 
-  //TODO: masih bisa diklik klo disable
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        surfaceTintColor: (isFilled && isEnabled)
-            ? primary
-            : (isEnabled ? onPrimary : Colors.grey),
-        backgroundColor: (isFilled && isEnabled)
-            ? primary
-            : (isEnabled ? onPrimary : Colors.grey),
+        surfaceTintColor: isFilled ? primary : onPrimary,
+        backgroundColor: isFilled ? primary : onPrimary,
         side: (isFilled && isEnabled)
             ? null
             : (isEnabled ? BorderSide(color: primary, width: 2) : null),
@@ -39,9 +33,7 @@ class CustomButton extends StatelessWidget {
         animationDuration: Duration(seconds: isEnabled ? 2 : 0),
         padding: const EdgeInsets.all(10),
       ),
-      onPressed: () {
-        onPressedAction();
-      },
+      onPressed: isEnabled ? () => onPressedAction() : null,
       child: Text(
         labelButton,
         style: (isFilled && isEnabled)

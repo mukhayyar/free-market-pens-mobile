@@ -50,7 +50,7 @@ class _TambahEditAlamatScreenState extends State<TambahEditAlamatScreen> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(36.0),
               child: CustomTextField(
                 labelText: 'Lokasi pengambilan',
                 hintText: 'Masukkan alamat lokasi pengambilan',
@@ -64,7 +64,7 @@ class _TambahEditAlamatScreenState extends State<TambahEditAlamatScreen> {
                 child: CustomButton(
                   isFilled: true,
                   labelButton: 'Simpan',
-                  width: 104,
+                  width: 130,
                   height: 38,
                   onPressedAction: () {},
                 ),

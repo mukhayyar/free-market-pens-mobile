@@ -9,14 +9,11 @@ class AutentikasiLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        title: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black,),
-        ),
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
       ),
       body: Column(
         children: [

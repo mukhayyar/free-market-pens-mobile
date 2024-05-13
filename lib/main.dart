@@ -21,10 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Free Market',
-      theme: appTheme,
-      debugShowCheckedModeBanner: false,
-      home: AutentikasiLogin()
-    );
+        title: 'Free Market',
+        theme: appTheme,
+        debugShowCheckedModeBanner: false,
+        home: AutentikasiProfil());
   }
 }

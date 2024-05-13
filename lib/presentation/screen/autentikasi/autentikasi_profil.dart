@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/bottom_appbar.dart';
+
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiProfil extends StatelessWidget {
@@ -29,10 +29,12 @@ class AutentikasiProfil extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.1,
             decoration: BoxDecoration(
+              // border: Border.all(color: Colors.black, width: 5.0),
               color: secondary,
               borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(300),
-                  bottomRight: Radius.circular(300)),
+                bottomLeft: Radius.circular(300),
+                bottomRight: Radius.circular(300),
+              ),
             ),
           ),
           Padding(

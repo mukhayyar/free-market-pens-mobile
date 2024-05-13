@@ -11,25 +11,11 @@ class AutentikasiUbahnomor extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(
-              width: 67,
-            ),
-            Text(
-              'Ubah Nomor',
-              style: TextStyle(color: onSecondary),
-            ),
-          ],
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
+        title: Text(
+          "Ubah Nomor",
+          style: appBarTitleStyle,
         ),
       ),
       body: Column(

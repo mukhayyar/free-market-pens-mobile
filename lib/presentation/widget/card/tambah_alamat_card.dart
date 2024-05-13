@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/seller/tambah_alamat_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screen/seller/tambah_edit_alamat_screen.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class TambahAlamatCard extends StatefulWidget {
@@ -15,6 +15,7 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
     return Card(
       clipBehavior: Clip.hardEdge,
       color: tertiary2,
+      surfaceTintColor: tertiary2,
       elevation: 3,
       shape: RoundedRectangleBorder(
         side: BorderSide(
@@ -29,8 +30,9 @@ class _TambahAlamatCardState extends State<TambahAlamatCard> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>
-                  const TambahAlamatScreen(), // Ganti dengan halaman yang sesuai
+              builder: (context) => const TambahEditAlamatScreen(
+                judul: 'Tambah Alamat',
+              ), // Ganti dengan halaman yang sesuai
             ),
           );
         },

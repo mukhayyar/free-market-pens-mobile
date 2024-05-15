@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/theme.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key});
@@ -13,7 +14,7 @@ class _SearchWidgetState extends State<SearchWidget> {
     TextEditingController _searchController = TextEditingController();
     return Container(
       width: double.infinity,
-      height: 50,
+      height: 40,
       decoration: BoxDecoration(
         color: Color(0xffF4F9F9),
         borderRadius: BorderRadius.circular(30),
@@ -44,6 +45,8 @@ class _SearchWidgetState extends State<SearchWidget> {
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(30),
           ),
+          hintStyle: TextStyle(
+              color: tertiary, fontFamily: 'InknutAntiqua', fontSize: 14),
           hintText: "Cari Produk",
         ),
       ),

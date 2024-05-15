@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         toolbarHeight: 80,
         surfaceTintColor: Colors.transparent,
-        backgroundColor: Colors.transparent,
         title: SearchWidget(),
         elevation: 2,
         actions: [
@@ -55,7 +54,7 @@ class _HomePageState extends State<HomePage> {
           shrinkWrap: true,
           itemCount: 5,
           itemBuilder: (context, index) {
-            return Row(
+            return const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ProdukCard(),

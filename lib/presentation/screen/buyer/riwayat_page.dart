@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/dibatalkan_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/proses_riwayat_page.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/selesai_riwayat_page.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/tersedia_riwayat_page.dart';
 import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
+import 'package:free_market_pens_mobile/theme.dart';
 
-class RiwayatPage extends StatelessWidget {
+class RiwayatPage extends StatefulWidget {
   const RiwayatPage({super.key});
 
+  @override
+  State<RiwayatPage> createState() => _RiwayatPageState();
+}
+
+class _RiwayatPageState extends State<RiwayatPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -18,8 +25,16 @@ class RiwayatPage extends StatelessWidget {
           elevation: 1,
           actions: [
             IconButton(
-              icon: const Icon(Icons.shopping_cart),
-              onPressed: () {},
+              icon: const Icon(
+                Icons.shopping_cart_outlined,
+                color: Color(0xff45b9c6),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => KeranjangScreen()),
+                );
+              },
             )
           ],
           bottom: const TabBar(
@@ -41,7 +56,7 @@ class RiwayatPage extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             ProsesRiwayatPage(),
             TersediaRiwayatPage(),

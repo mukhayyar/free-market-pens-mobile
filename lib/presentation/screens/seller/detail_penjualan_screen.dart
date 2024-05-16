@@ -40,9 +40,7 @@ class _DetailPenjualanScreenState extends State<DetailPenjualanScreen> {
                   ),
                 ),
               ),
-              const Dropdown(
-                dropdownType: 'batch',
-              ),
+              const Dropdown(dropdownType: 'batch'),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
                 child: ListView.builder(

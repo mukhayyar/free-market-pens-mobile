@@ -80,9 +80,7 @@ class DetailPesananCard extends StatelessWidget {
                 thickness: 1,
                 color: tertiary,
               ),
-              const SizedBox(
-                height: 8,
-              ),
+              const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -99,9 +97,7 @@ class DetailPesananCard extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 8,
-              ),
+              const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -1,3 +1,4 @@
+import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_batch_page.dart';
@@ -10,7 +11,6 @@ import 'package:free_market_pens_mobile/presentation/widgets/components/info_pen
 import 'package:free_market_pens_mobile/presentation/widgets/components/konten.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/info_waktu.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/keterangan_gambar.dart';
-import 'package:free_market_pens_mobile/presentation/widgets/components/read_more_text.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class DetailProdukPage extends StatelessWidget {
@@ -172,7 +172,15 @@ class DetailProdukPage extends StatelessWidget {
                   ),
                 Konten(
                     judulKeterangan: 'Deskripsi',
-                    keterangan: ReadMoreText(longText: deskripsi)),
+                    keterangan: ExpandableText(
+                      deskripsi,
+                      expandText: 'Baca Selengkapnya',
+                      collapseText: 'Tutup',
+                      style: tertiaryTextStyle,
+                      linkStyle: TextStyle(
+                          fontWeight: FontWeight.w800, color: tertiary),
+                      maxLines: 5,
+                    )),
                 if (role == 'seller')
                   Column(
                     children: [

@@ -6,10 +6,9 @@ const List<String> list = <String>[
   'Two',
   'Three',
   'Four',
-  'One',
-  'Two',
-  'Three',
-  'Four',
+  'Five',
+  'Six',
+  'Seven',
 ];
 
 class Dropdown extends StatefulWidget {
@@ -21,7 +20,6 @@ class Dropdown extends StatefulWidget {
   State<Dropdown> createState() => _DropdownState();
 }
 
-//TODO: warna selected item dropdown nya perlu dibenerin
 class _DropdownState extends State<Dropdown> {
   String? selectedValue;
 
@@ -45,7 +43,6 @@ class _DropdownState extends State<Dropdown> {
         ],
       ),
       child: DropdownMenu<String>(
-        // width: screenWidth,
         menuStyle: MenuStyle(
             maximumSize: MaterialStatePropertyAll(Size.fromWidth(screenWidth)),
             padding:
@@ -72,12 +69,9 @@ class _DropdownState extends State<Dropdown> {
             horizontal: 20,
           ),
           border: OutlineInputBorder(
-            // gapPadding: BorderSide.strokeAlignCenter,
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(30.0),
           ),
-          // fillColor: tertiary2,
-          hoverColor: tertiary2,
         ),
         onSelected: (String? value) {
           setState(() {
@@ -89,16 +83,18 @@ class _DropdownState extends State<Dropdown> {
           return DropdownMenuEntry<String>(
             value: value,
             label: value,
+            enabled: selectedValue != value,
             style: MenuItemButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               textStyle: secondaryTextStyle,
               backgroundColor: onPrimary,
+              surfaceTintColor: onPrimary,
               elevation: 4,
               shadowColor: tertiary,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                   side: BorderSide(
-                    color: tertiary2,
+                    color: selectedValue != value ? tertiary2 : secondary,
                     width: 2,
                     strokeAlign: BorderSide.strokeAlignInside,
                   )),

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_produk_page.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/keterangan_gambar.dart';
 
 import '../../screens/common/detail_produk_page.dart';
 
 class ProdukCard extends StatelessWidget {
-  final String role = 'buyer';
+  final String role = 'seller';
   final String imgProduk =
       'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg';
   final String namaProduk = 'Tahu Bakso Enak Dapur Mama Udin';
   final int hargaProduk = 12000;
-  final String statusProduk = 'tutup';
+  final String statusProduk = 'terima';
 
   const ProdukCard({super.key});
 
@@ -25,8 +26,7 @@ class ProdukCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>
-                  const DetailProdukPage(), // Ganti dengan halaman yang sesuai
+              builder: (context) => const DetailProdukPage(),
             ),
           );
         },
@@ -56,9 +56,7 @@ class ProdukCard extends StatelessWidget {
                         ),
                 ),
               ),
-              const SizedBox(
-                height: 8,
-              ),
+              const SizedBox(height: 8),
               Text(
                 namaProduk,
                 style: Theme.of(context).textTheme.bodyMedium,
@@ -93,7 +91,14 @@ class ProdukCard extends StatelessWidget {
                           elevation: 4,
                         ),
                         onPressed: () {
-                          // masuk ke page edit
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         // role == 'seller' ? const TambahEditProdukPage(tipe: 'edit') : ,
+                          //         // TODO: klo seller masuk ke edit produk page, klo buyer masukkin produk ke keranjang
+                          //   ),
+                          // );
                         },
                         child: Icon(
                           role == 'seller' ? Icons.edit_outlined : Icons.add,

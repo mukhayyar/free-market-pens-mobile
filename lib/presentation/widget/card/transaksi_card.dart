@@ -20,6 +20,7 @@ class TransaksiCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card.outlined(
+      margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
       // margin: const EdgeInsets.all(35),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
@@ -36,7 +37,7 @@ class TransaksiCard extends StatelessWidget {
         },
         child: Container(
           height: 117,
-          width: 344,
+          width: MediaQuery.of(context).size.width,
           padding:
               const EdgeInsets.only(top: 10.0, bottom: 10, left: 12, right: 12),
           child: Column(

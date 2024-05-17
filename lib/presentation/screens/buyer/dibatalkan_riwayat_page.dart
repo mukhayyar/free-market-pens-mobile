@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
 
 class DibatalkanRiwayatPage extends StatefulWidget {
   const DibatalkanRiwayatPage({super.key});

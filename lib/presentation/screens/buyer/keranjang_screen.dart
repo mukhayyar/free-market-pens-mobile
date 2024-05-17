@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/checkout_screen.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/checkout_card.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/checkout_card.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/keranjang_card.dart';
 

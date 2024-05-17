@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiUbahnomor extends StatelessWidget {
@@ -58,6 +58,7 @@ class AutentikasiUbahnomor extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 211, top: 20),
             child: CustomButton(
+              onPressedAction: {},
               isFilled: true,
               labelButton: "Simpan",
               width: 120,

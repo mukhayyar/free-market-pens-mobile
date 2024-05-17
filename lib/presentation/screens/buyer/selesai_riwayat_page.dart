@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/keranjang_card.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/gambar.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/keranjang_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/gambar.dart';
 
 class SelesaiRiwayatPage extends StatefulWidget {
   const SelesaiRiwayatPage({super.key});

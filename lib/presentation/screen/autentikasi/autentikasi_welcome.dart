@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiWelcome extends StatelessWidget {
@@ -43,12 +43,20 @@ class AutentikasiWelcome extends StatelessWidget {
               height: 57,
             ),
             const CustomButton(
-                isFilled: true, labelButton: 'Masuk', width: 255, height: 49),
+                onPressedAction: {},
+                isFilled: true,
+                labelButton: 'Masuk',
+                width: 255,
+                height: 49),
             const SizedBox(
               height: 17,
             ),
             const CustomButton(
-                isFilled: false, labelButton: 'Daftar', width: 255, height: 49)
+                onPressedAction: {},
+                isFilled: false,
+                labelButton: 'Daftar',
+                width: 255,
+                height: 49)
           ],
         ),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiRegister extends StatelessWidget {
@@ -16,7 +16,10 @@ class AutentikasiRegister extends StatelessWidget {
         backgroundColor: Colors.white,
         title: IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black,),
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
         ),
       ),
       body: Column(
@@ -81,6 +84,7 @@ class AutentikasiRegister extends StatelessWidget {
             height: 56,
           ),
           const CustomButton(
+            onPressedAction: {},
             isFilled: true,
             labelButton: "Daftar",
             width: 255,

@@ -13,7 +13,7 @@ class TokoPage extends StatefulWidget {
 }
 
 class _TokoPageState extends State<TokoPage> {
-  final String _namaToko = 'Dapur Assalamualaikum';
+  final String _namaToko = 'Dapur Assalamualaikumsadasdasasdasdas';
   final String _whatsAppNumber = '6285888429506';
 
   void _launchWhatsApp() async {

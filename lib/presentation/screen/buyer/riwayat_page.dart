@@ -5,6 +5,7 @@ import 'package:free_market_pens_mobile/presentation/screen/buyer/proses_riwayat
 import 'package:free_market_pens_mobile/presentation/screen/buyer/selesai_riwayat_page.dart';
 import 'package:free_market_pens_mobile/presentation/screen/buyer/tersedia_riwayat_page.dart';
 import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/screen/buyer/buyer_page.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class RiwayatPage extends StatefulWidget {

@@ -104,4 +104,14 @@ final appTheme = ThemeData.light().copyWith(
         bodyMedium: secondaryTextStyle,
         bodySmall: tertiaryTextStyle,
       ),
+  tabBarTheme: TabBarTheme(
+    indicator: UnderlineTabIndicator(
+      borderSide: BorderSide(
+        color: primary,
+        width: 2,
+      ),
+    ),
+    unselectedLabelColor: Colors.grey,
+    labelColor: primary,
+  ),
 );

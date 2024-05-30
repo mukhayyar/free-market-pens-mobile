@@ -14,7 +14,7 @@ import 'package:free_market_pens_mobile/presentation/widgets/components/keterang
 import 'package:free_market_pens_mobile/theme.dart';
 
 class DetailProdukPage extends StatelessWidget {
-  final String role = 'seller';
+  final String role;
   final String imgProduk =
       'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg';
   final String namaProduk = 'Tahu Bakso Enak Dapur Mama Udin';
@@ -35,7 +35,7 @@ class DetailProdukPage extends StatelessWidget {
   final String? statusProdukSekarang = 'selesai'; //status produk batch yg skrg
   //final String linkWA;
 
-  const DetailProdukPage({super.key});
+  const DetailProdukPage({super.key, required this.role});
 
   @override
   Widget build(BuildContext context) {

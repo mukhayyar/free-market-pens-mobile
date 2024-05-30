@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/buyer_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/home_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/toko_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_batch_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/toko_saya_page.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/keranjang_card.dart';
@@ -24,9 +28,7 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: const TokoSayaPage(
-          // noBatch: 1,
-          ),
+      home: BuyerPage(),
     );
   }
 }

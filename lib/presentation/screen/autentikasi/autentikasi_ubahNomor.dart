@@ -44,11 +44,11 @@ class AutentikasiUbahnomor extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 211, top: 20),
             child: CustomButton(
+              onPressedAction: {},
               isFilled: true,
               labelButton: "Simpan",
               width: 120,
               height: 38,
-              onPressedAction: (),
             ),
           ),
         ],

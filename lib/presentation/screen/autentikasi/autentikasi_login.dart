@@ -12,8 +12,15 @@ class AutentikasiLogin extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        surfaceTintColor: Colors.transparent,
-        centerTitle: true,
+        toolbarHeight: 100,
+        backgroundColor: Colors.white,
+        title: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
+        ),
       ),
       body: Column(
         children: [
@@ -70,11 +77,11 @@ class AutentikasiLogin extends StatelessWidget {
             height: 56,
           ),
           const CustomButton(
+            onPressedAction: {},
             isFilled: true,
             labelButton: "Daftar",
             width: 255,
             height: 38,
-            onPressedAction: (),
           ),
           const SizedBox(
             height: 7,

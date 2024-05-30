@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screens/buyer/keranjang_screen.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/produk_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/dialog_confirmation.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/image_widget.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/search_widget.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,14 +15,42 @@ class TokoPage extends StatefulWidget {
 }
 
 class _TokoPageState extends State<TokoPage> {
-  final String _namaToko = 'Dapur Assalamualaikum';
+  final String _namaToko = 'Dapur ';
   final String _whatsAppNumber = '6285888429506';
+  final bool _status = true; // Set status to false to show the dialog
+  final List<String> _items = ['s'];
+
+  @override
+  void initState() {
+    super.initState();
+    if (!_status) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _showDialogConfirmation();
+      });
+    }
+  }
 
   void _launchWhatsApp() async {
     final url = Uri.parse('https://wa.me/$_whatsAppNumber');
     if (!await launchUrl(url)) {
-      throw 'Could not launch $url';
+      throw 'Tidak dapat membuka $url';
     }
+  }
+
+  void _showDialogConfirmation() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return DialogConfirmation(
+          name: "info-toko-tutup",
+          id: 0,
+          userName: "John",
+          onConfirm: () {
+            Navigator.pop(context);
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -118,23 +148,47 @@ class _TokoPageState extends State<TokoPage> {
               ],
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ProdukCard(),
-                      ProdukCard(),
-                    ],
+          _items.isNotEmpty
+              ? SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8.0, horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ProdukCard(
+                              role: 'buyyer',
+                            ),
+                            ProdukCard(
+                              role: 'buyeer',
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    childCount: (_items.length / 2).ceil(),
                   ),
-                );
-              },
-              childCount: 5,
-            ),
-          ),
+                )
+              : SliverFillRemaining(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ImageWidget(
+                          path: "assets/images/empty_card.png",
+                          width: 100,
+                          height: 100,
+                        ),
+                        Text(
+                          'Tidak ada produk',
+                          style: tertiaryTextStyle,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
         ],
       ),
     );

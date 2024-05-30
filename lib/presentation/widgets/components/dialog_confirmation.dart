@@ -3,15 +3,18 @@ import 'package:free_market_pens_mobile/dialog.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class DialogConfirmation extends StatefulWidget {
-  const DialogConfirmation(
-      {super.key,
-      required this.name,
-      required this.id,
-      required this.userName});
+  const DialogConfirmation({
+    Key? key,
+    required this.name,
+    required this.id,
+    required this.userName,
+    required this.onConfirm,
+  }) : super(key: key);
 
   final String name;
   final int id;
   final String userName;
+  final VoidCallback onConfirm;
 
   @override
   State<DialogConfirmation> createState() => _DialogConfirmationState();
@@ -103,7 +106,7 @@ class _DialogConfirmationState extends State<DialogConfirmation> {
             ),
             ElevatedButton(
               onPressed: () {
-                // Handle "Ya" action
+                widget.onConfirm();
                 Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
@@ -150,7 +153,7 @@ class _DialogConfirmationState extends State<DialogConfirmation> {
             ),
             ElevatedButton(
               onPressed: () {
-                // Handle "Ya" action
+                widget.onConfirm();
                 Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
@@ -174,6 +177,7 @@ class _DialogConfirmationState extends State<DialogConfirmation> {
         return Center(
           child: ElevatedButton(
             onPressed: () {
+              widget.onConfirm();
               Navigator.pop(context);
             },
             style: ElevatedButton.styleFrom(

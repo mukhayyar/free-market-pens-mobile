@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiUbahsandi extends StatelessWidget {
@@ -11,25 +11,11 @@ class AutentikasiUbahsandi extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(
-              width: 50,
-            ),
-            Text(
-              'Ubah Kata Sandi',
-              style: TextStyle(color: onSecondary),
-            ),
-          ],
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
+        title: Text(
+          "Ubah Nomor",
+          style: appBarTitleStyle,
         ),
       ),
       body: Column(
@@ -41,6 +27,7 @@ class AutentikasiUbahsandi extends StatelessWidget {
                 CustomTextField(
                   icon: Icons.lock,
                   isPassword: true,
+                  obscureText: true,
                   labelText: "Kata sandi lama",
                   hintText: "Kata sandi lama",
                   controller: TextEditingController(),
@@ -48,6 +35,7 @@ class AutentikasiUbahsandi extends StatelessWidget {
                 CustomTextField(
                   icon: Icons.lock,
                   isPassword: true,
+                  obscureText: true,
                   labelText: "Kata sandi baru",
                   hintText: "Kata sandi baru",
                   controller: TextEditingController(),
@@ -55,6 +43,7 @@ class AutentikasiUbahsandi extends StatelessWidget {
                 CustomTextField(
                   icon: Icons.lock,
                   isPassword: true,
+                  obscureText: true,
                   labelText: "Konfirmasi kata sandi baru",
                   hintText: "Konfirmasi kata sandi baru",
                   controller: TextEditingController(),
@@ -69,6 +58,7 @@ class AutentikasiUbahsandi extends StatelessWidget {
               labelButton: "Simpan",
               width: 120,
               height: 38,
+              onPressedAction: (),
             ),
           ),
         ],

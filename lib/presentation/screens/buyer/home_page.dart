@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/produk_card.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/search_widget.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/keranjang_screen.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/produk_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/search_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

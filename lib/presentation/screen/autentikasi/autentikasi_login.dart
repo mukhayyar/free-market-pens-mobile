@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiLogin extends StatelessWidget {
@@ -9,14 +9,11 @@ class AutentikasiLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        title: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black,),
-        ),
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
       ),
       body: Column(
         children: [
@@ -77,6 +74,7 @@ class AutentikasiLogin extends StatelessWidget {
             labelButton: "Daftar",
             width: 255,
             height: 38,
+            onPressedAction: (),
           ),
           const SizedBox(
             height: 7,

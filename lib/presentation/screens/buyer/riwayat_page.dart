@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/dibatalkan_riwayat_page.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/proses_riwayat_page.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/selesai_riwayat_page.dart';
-import 'package:free_market_pens_mobile/presentation/screen/buyer/tersedia_riwayat_page.dart';
-import 'package:free_market_pens_mobile/presentation/widget/card/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/dibatalkan_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/keranjang_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/proses_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/selesai_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/tersedia_riwayat_page.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class RiwayatPage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiUbahnomor extends StatelessWidget {
@@ -11,25 +11,11 @@ class AutentikasiUbahnomor extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(
-              width: 67,
-            ),
-            Text(
-              'Ubah Nomor',
-              style: TextStyle(color: onSecondary),
-            ),
-          ],
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
+        title: Text(
+          "Ubah Nomor",
+          style: appBarTitleStyle,
         ),
       ),
       body: Column(
@@ -62,6 +48,7 @@ class AutentikasiUbahnomor extends StatelessWidget {
               labelButton: "Simpan",
               width: 120,
               height: 38,
+              onPressedAction: (),
             ),
           ),
         ],

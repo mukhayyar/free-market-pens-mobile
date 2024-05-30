@@ -70,7 +70,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               suffixIcon: widget.isPassword
                   ? IconButton(
                       icon: Icon(
-                        _isObscure ? Icons.visibility : Icons.visibility_off,
+                        !_isObscure ? Icons.visibility : Icons.visibility_off,
                         color: const Color(0xFF404040),
                       ),
                       onPressed: () {

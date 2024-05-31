@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_button.dart';
-import 'package:free_market_pens_mobile/presentation/widget/component/custom_textfield.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_button.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/custom_textfield.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiRegister extends StatelessWidget {
@@ -14,6 +14,15 @@ class AutentikasiRegister extends StatelessWidget {
       appBar: AppBar(
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
+        toolbarHeight: 100,
+        backgroundColor: Colors.white,
+        title: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: ConstrainedBox(
@@ -28,7 +37,7 @@ class AutentikasiRegister extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: const Padding(
-                    padding: EdgeInsets.only(left: 47),
+                    padding: EdgeInsets.only(left: 47, top: 30),
                     child: Text(
                       'Daftar Akun\nDisini.',
                       style: TextStyle(
@@ -42,7 +51,6 @@ class AutentikasiRegister extends StatelessWidget {
                   height: 30,
                 ),
                 Container(
-                  // color: Colors.blueGrey,
                   margin: EdgeInsets.only(left: 27, right: 17),
                   child: Column(
                     children: [
@@ -92,6 +100,7 @@ class AutentikasiRegister extends StatelessWidget {
                   labelButton: "Daftar",
                   width: 255,
                   height: 38,
+                  onPressedAction: null,
                 ),
                 const SizedBox(
                   height: 7,
@@ -116,7 +125,7 @@ class AutentikasiRegister extends StatelessWidget {
                       onTap: () {},
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),

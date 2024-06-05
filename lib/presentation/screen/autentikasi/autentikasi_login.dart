@@ -72,6 +72,14 @@ class AutentikasiLogin extends StatelessWidget {
                   hintText: "Username/Email",
                   controller: TextEditingController(),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Lupa Kata Sandi?', style: TextStyle(
+                    color: Color.fromRGBO(69, 185, 198, 1),
+                  ),),
+                  ],
+                )
               ],
             ),
           ),

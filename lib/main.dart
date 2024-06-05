@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screen/autentikasi/autentikasi_login.dart';
+import 'package:free_market_pens_mobile/presentation/screen/autentikasi/autentikasi_profil.dart';
+import 'package:free_market_pens_mobile/presentation/screen/autentikasi/autentikasi_ubahSandi.dart';
+import 'package:free_market_pens_mobile/presentation/screen/autentikasi/autentikasi_welcome.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/buyer_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/checkout_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/home_page.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/toko_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/tambah_edit_batch_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/seller/toko_saya_page.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/alamat_card.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/keranjang_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/dialog_confirmation.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/edit_role.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/konfirmasi_icon_button.dart';
 // import 'package:free_market_pens_mobile/presentation/screen/buyer/home_page.dart';
 // import 'package:free_market_pens_mobile/presentation/screen/buyer/keranjang_screen.dart';
 // import 'package:free_market_pens_mobile/presentation/screen/buyer/toko_page.dart';
@@ -24,9 +37,7 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: const TokoSayaPage(
-          // noBatch: 1,
-          ),
+      home: EditRole(),
     );
   }
 }

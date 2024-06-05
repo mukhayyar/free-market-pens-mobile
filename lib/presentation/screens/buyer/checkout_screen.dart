@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/checkout_card.dart';
+import 'package:free_market_pens_mobile/presentation/widgets/components/dialog_confirmation.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class CheckoutScreen extends StatefulWidget {
@@ -10,6 +11,22 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
+  void _showDialogConfirmation() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return DialogConfirmation(
+          name: "pesanan-berhasil-dibuat",
+          id: 0,
+          userName: "John",
+          onConfirm: () {
+            Navigator.pop(context); // Tutup dialog
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     int _totalHarga = 100000;
@@ -24,18 +41,15 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(9, 6, 9, 0),
-        child: Flexible(
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              return const CheckoutCard();
-            },
-          ),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return const CheckoutCard();
+          },
         ),
       ),
       bottomSheet: Container(
-        margin: null,
         height: 70,
         decoration: BoxDecoration(color: appTheme.primaryColor, boxShadow: [
           BoxShadow(
@@ -48,47 +62,29 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Total Pembayaran',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: tertiary,
-                          ),
-                        ),
-                        Text(
-                          'Rp. $_totalHarga',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: primary,
-                          ),
-                        ),
-                      ],
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                color: onPrimary,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Total Pembayaran',
+                      style: TextStyle(
+                        fontSize: 12,
+                      ),
                     ),
-                  ),
-                ],
+                    Text('Rp. $_totalHarga', style: secondaryPriceStyle),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              width: 20,
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CheckoutScreen()),
-                );
+                _showDialogConfirmation();
               },
               child: Container(
-                padding: null,
                 width: 150,
                 height: 70,
                 decoration: BoxDecoration(

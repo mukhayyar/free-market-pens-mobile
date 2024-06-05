@@ -78,7 +78,9 @@ class ProdukSayaPage extends StatelessWidget {
                           child: Center(
                             child: index == 0
                                 ? const TambahProdukCard()
-                                : const ProdukCard(),
+                                : const ProdukCard(
+                                    role: 'seller',
+                                  ),
                           )),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(

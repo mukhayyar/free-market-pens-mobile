@@ -56,13 +56,16 @@ class _RiwayatPageState extends State<RiwayatPage> {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            ProsesRiwayatPage(),
-            TersediaRiwayatPage(),
-            SelesaiRiwayatPage(),
-            DibatalkanRiwayatPage(),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: TabBarView(
+            children: [
+              ProsesRiwayatPage(),
+              TersediaRiwayatPage(),
+              SelesaiRiwayatPage(),
+              DibatalkanRiwayatPage(),
+            ],
+          ),
         ),
       ),
     );

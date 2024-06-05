@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'package:free_market_pens_mobile/presentation/widgets/components/bottom_appbar.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiProfil extends StatelessWidget {
-  const AutentikasiProfil({super.key});
+  AutentikasiProfil({super.key});
+
+  bool isAdmin = true;
 
   @override
   Widget build(BuildContext context) {
@@ -106,14 +107,14 @@ class AutentikasiProfil extends StatelessWidget {
             ),
             Container(
               // color: Colors.indigo,
-              height: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height * 0.45,
               width: MediaQuery.of(context).size.width * 0.83,
               child: Column(
                 children: [
                   GestureDetector(
                     onTap: () {},
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                      contentPadding: EdgeInsets.symmetric(vertical: 1.0),
                       leading: Container(
                         height: 43,
                         width: 45,
@@ -137,7 +138,7 @@ class AutentikasiProfil extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                      contentPadding: EdgeInsets.symmetric(vertical: 1.0),
                       leading: Container(
                         height: 43,
                         width: 45,
@@ -161,7 +162,7 @@ class AutentikasiProfil extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                      contentPadding: EdgeInsets.symmetric(vertical: 1.0),
                       leading: Container(
                         height: 43,
                         width: 45,
@@ -182,6 +183,39 @@ class AutentikasiProfil extends StatelessWidget {
                           color: Colors.black, size: 40.0),
                     ),
                   ),
+                  isAdmin
+                      ? GestureDetector(
+                          onTap: () {},
+                          child: ListTile(
+                            contentPadding: EdgeInsets.symmetric(vertical: 1.0),
+                            leading: Container(
+                              height: 43,
+                              width: 45,
+                              decoration: const BoxDecoration(
+                                color: Color.fromRGBO(217, 217, 217, 0.5),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(12),
+                                ),
+                              ),
+                              child: FittedBox(
+                                fit: BoxFit.contain,
+                                child: Image.asset(
+                                  'assets/icons/admin.png',
+                                  color: Colors.black,
+                                  height: 70,
+                                ),
+                              ),
+                            ),
+                            title: Text(
+                              "Manajemen Akun",
+                              style: secondaryTextStyle,
+                              textAlign: TextAlign.justify,
+                            ),
+                            trailing: Icon(Icons.keyboard_arrow_right,
+                                color: Colors.black, size: 40.0),
+                          ),
+                        )
+                      : Container()
                 ],
               ),
             )

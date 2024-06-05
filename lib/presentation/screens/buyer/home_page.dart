@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/screens/buyer/keranjang_screen.dart';
+import 'package:free_market_pens_mobile/presentation/screens/buyer/toko_page.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/produk_card.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/components/search_widget.dart';
@@ -29,7 +30,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => KeranjangScreen()),
+                MaterialPageRoute(builder: (context) => TokoPage()),
               );
             },
           ),
@@ -57,8 +58,12 @@ class _HomePageState extends State<HomePage> {
             return const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ProdukCard(),
-                ProdukCard(),
+                ProdukCard(
+                  role: 'buyyer',
+                ),
+                ProdukCard(
+                  role: 'buyyer',
+                ),
               ],
             );
           },

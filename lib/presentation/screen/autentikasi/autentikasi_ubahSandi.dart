@@ -4,7 +4,9 @@ import 'package:free_market_pens_mobile/presentation/widgets/components/custom_t
 import 'package:free_market_pens_mobile/theme.dart';
 
 class AutentikasiUbahsandi extends StatelessWidget {
-  const AutentikasiUbahsandi({super.key});
+  AutentikasiUbahsandi({super.key});
+
+  bool isAdmin = true;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class AutentikasiUbahsandi extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
         title: Text(
-          "Ubah Nomor",
+          "Ubah Kata Sandi",
           style: appBarTitleStyle,
         ),
       ),
@@ -24,14 +26,16 @@ class AutentikasiUbahsandi extends StatelessWidget {
             margin: EdgeInsets.only(left: 27, right: 17),
             child: Column(
               children: [
-                CustomTextField(
-                  icon: Icons.lock,
-                  isPassword: true,
-                  obscureText: true,
-                  labelText: "Kata sandi lama",
-                  hintText: "Kata sandi lama",
-                  controller: TextEditingController(),
-                ),
+                isAdmin
+                    ? Container()
+                    : CustomTextField(
+                        icon: Icons.lock,
+                        isPassword: true,
+                        obscureText: true,
+                        labelText: "Kata sandi lama",
+                        hintText: "Kata sandi lama",
+                        controller: TextEditingController(),
+                      ),
                 CustomTextField(
                   icon: Icons.lock,
                   isPassword: true,

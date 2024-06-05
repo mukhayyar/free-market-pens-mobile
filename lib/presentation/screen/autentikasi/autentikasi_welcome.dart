@@ -23,7 +23,7 @@ class AutentikasiWelcome extends StatelessWidget {
             ),
             const Center(
               child: Text(
-                'Selamat datang\n di Free Market',
+                'Selamat datang\ndi Market PENS',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
               ),
             ),

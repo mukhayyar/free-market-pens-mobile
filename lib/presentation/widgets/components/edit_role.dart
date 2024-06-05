@@ -18,7 +18,7 @@ class _EditRoleState extends State<EditRole> {
   Widget build(BuildContext context) {
     return Dialog(
       child: Container(
-        height: 131,
+        height: 140,
         width: 247,
         decoration: BoxDecoration(
           color: onPrimary,
@@ -29,31 +29,68 @@ class _EditRoleState extends State<EditRole> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
-              'Edit role',
-              style: textLabelStyle,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Edit role',
+                style: textLabelStyle,
+              ),
             ),
-            DropdownButton<String>(
-              value: valueChoose,
-              hint: Text("Pilih Role"),
-              onChanged: (String? newValue) {
-                setState(() {
-                  valueChoose = newValue;
-                });
-              },
-              items: listRole.map((String valueItem) {
-                return DropdownMenuItem<String>(
-                  value: valueItem,
-                  child: Text(valueItem),
-                );
-              }).toList(),
+            Container(
+              height: 40,
+              width: 250,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.transparent),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 3,
+                    offset: const Offset(0, 5),
+                  )
+                ],
+                borderRadius: BorderRadius.all(
+                  Radius.circular(50),
+                ),
+              ),
+              child: DropdownButton<String>(
+                value: valueChoose,
+                hint: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Pilih Role", style: tertiaryTextStyle),
+                ),
+                isExpanded: true,
+                icon: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(Icons.keyboard_arrow_down_outlined),
+                ),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    valueChoose = newValue;
+                  });
+                },
+                items: listRole.map((String valueItem) {
+                  return DropdownMenuItem<String>(
+                    value: valueItem,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(valueItem, style: tertiaryTextStyle),
+                    ),
+                  );
+                }).toList(),
+                underline: const SizedBox.shrink(),
+              ),
             ),
-            CustomButton(
-              isFilled: true,
-              labelButton: 'Simpan',
-              width: 10,
-              height: 10,
-              onPressedAction: () {},
+            Padding(
+              padding: const EdgeInsets.only(left: 165.0),
+              child: CustomButton(
+                isFilled: true,
+                labelButton: 'Simpan',
+                width: 10,
+                height: 10,
+                onPressedAction: () {},
+              ),
             ),
           ],
         ),

@@ -19,7 +19,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         toolbarHeight: 80,
         surfaceTintColor: Colors.transparent,
-        title: SearchWidget(),
+        title: SearchWidget(
+          strHint: 'Cari Produk',
+        ),
         elevation: 2,
         actions: [
           IconButton(

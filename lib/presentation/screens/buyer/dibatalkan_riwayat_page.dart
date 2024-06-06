@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/presentation/widgets/cards/transaksi_card.dart';
-<<<<<<< HEAD
-=======
 import 'package:free_market_pens_mobile/presentation/widgets/components/image_widget.dart';
 import 'package:free_market_pens_mobile/theme.dart';
->>>>>>> 237ee0d83ea8283c508b252429a1d7448de6881b
 
 class DibatalkanRiwayatPage extends StatefulWidget {
   const DibatalkanRiwayatPage({super.key});

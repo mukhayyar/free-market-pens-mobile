@@ -59,7 +59,9 @@ class _TokoPageState extends State<TokoPage> {
       appBar: AppBar(
         toolbarHeight: 80,
         surfaceTintColor: Colors.transparent,
-        title: SearchWidget(),
+        title: SearchWidget(
+          strHint: 'Cari Produk',
+        ),
         elevation: 1,
         leading: IconButton(
           icon: const Icon(

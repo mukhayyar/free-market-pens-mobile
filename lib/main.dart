@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_market_pens_mobile/presentation/screens/admin/admin_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/buyer/buyer_page.dart';
 import 'package:free_market_pens_mobile/presentation/screens/buyer/checkout_screen.dart';
 import 'package:free_market_pens_mobile/presentation/screens/buyer/home_page.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: BuyerPage(),
+      home: AdminPage(),
     );
   }
 }

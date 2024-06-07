@@ -90,4 +90,18 @@ const List<DialogMessage> dialogs = [
       imgPath: 'assets/images/Announcement.png',
       message:
           'Konfirmasi pembayaran tidak bisa dilakukan. Produk ini belum tanggal pengambilan.'),
+  DialogMessage(
+    name: "konfirmasi-hapus-user",
+    path: '/user/{id}/delete',
+    type: DialogType.confirmation,
+    imgPath: 'assets/images/deleted.png',
+    message: 'Apakah Anda yakin untuk menghapus user?',
+  ),
+  DialogMessage(
+    name: "konfirmasi-hapus-user-toko",
+    path: '/user/{id}/delete',
+    type: DialogType.confirmation,
+    imgPath: 'assets/images/deleted.png',
+    message: 'User ini memiliki toko. Apakah Anda yakin untuk menghapus user?',
+  ),
 ];

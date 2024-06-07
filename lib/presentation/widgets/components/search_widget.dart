@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:free_market_pens_mobile/theme.dart';
 
 class SearchWidget extends StatefulWidget {
-  const SearchWidget({super.key});
+  const SearchWidget({Key? key, required this.strHint}) : super(key: key);
+
+  final String strHint;
 
   @override
   State<SearchWidget> createState() => _SearchWidgetState();
@@ -12,6 +14,7 @@ class _SearchWidgetState extends State<SearchWidget> {
   @override
   Widget build(BuildContext context) {
     TextEditingController _searchController = TextEditingController();
+
     return Container(
       width: double.infinity,
       height: 40,
@@ -47,7 +50,7 @@ class _SearchWidgetState extends State<SearchWidget> {
           ),
           hintStyle: TextStyle(
               color: tertiary, fontFamily: 'InknutAntiqua', fontSize: 14),
-          hintText: "Cari Produk",
+          hintText: widget.strHint,
         ),
       ),
     );
